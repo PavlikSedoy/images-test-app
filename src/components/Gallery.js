@@ -50,13 +50,12 @@ export default function Gallery({ images, loading, handleRemove }) {
 
     return (
         <>
-            <Container sx={{ py: 8 }} maxWidth="md">
+            <Container maxWidth="md">
                 <Grid container spacing={4}>
-                    {images.map((image, key) => (
+                    {images.map(image => (
                         <Grid item key={image.id} xs={12} sm={6} md={3}>
                             <Card
                                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                                onClick={() => handleOpenModal(image.url)}
                             >
                                 <CardMedia
                                     component="img"
@@ -64,6 +63,7 @@ export default function Gallery({ images, loading, handleRemove }) {
                                     }}
                                     image={image.thumbnailUrl}
                                     alt={image.title}
+                                    onClick={() => handleOpenModal(image.url)}
                                 />
                                 <Button variant="outlined" color="error" onClick={() => handleRemoveImg(image.id)}>
                                     Remove
