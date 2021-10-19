@@ -33,10 +33,15 @@ export default function App() {
     setPage(value)
   }
 
+  const handleRemoveImage = id => {
+    const newImages = images.filter(image => image.id !== id)
+    setImages(newImages)
+  }
+
   return (
     <div>
       <Heading />
-      <Gallery images={currentPageImages} loading={loading} />
+      <Gallery images={currentPageImages} loading={loading} handleRemove={handleRemoveImage} />
       <Container sx={{ py: 8, display: 'flex', justifyContent: 'center' }} maxWidth="md">
         <Stack spacing={2}>
           <Pagination count={pagesCount} page={page} onChange={handlePaginationClick} />
