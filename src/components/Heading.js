@@ -1,9 +1,7 @@
 
 import React from 'react'
 
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
+import { Box, Typography, Container } from '@mui/material'
 
 export default function Heading() {
     return (

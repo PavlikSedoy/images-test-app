@@ -1,8 +1,5 @@
 import React from 'react'
 
-// import Container from '@mui/material/Container'
-// import Grid from '@mui/material/Grid'
-// import Card from '@mui/material/Card'
 import { Typography, Card, Grid, Container } from '@mui/material'
 
 export default function Gallery({ images, loading }) {
