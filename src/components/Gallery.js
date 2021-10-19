@@ -25,7 +25,7 @@ export default function Gallery({ images, loading }) {
                 {images.map(image => (
                     <Grid item key={image.id} xs={12} sm={6} md={3}>
                         <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                            Some image
+                            {image.id}
                         </Card>
                     </Grid>
                 ))}
